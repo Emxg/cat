@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat</title>
+  <link rel="icon" type="image/png" href="https://lh5.googleusercontent.com/d/1v1ToTLrNdmOTjGmUqg18WDsGzP25CA7E">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: Kanit, sans-serif;
+    }
+
+    .card-container {
+      position: relative;
+    }
+
+    .card,
+    .small-card {
+      width: 300px;
+      height: 400px;
+      background-color: #fff;
+      border-radius: 25px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      margin-bottom: 20px;
+      position: relative;
+      animation: bounce 2s infinite;
+    }
+
+    .small-card {
+      width: 250px;
+      height: 250px;
+      background-color: #3498db;
+      border-radius: 25px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: -50px;
+      left: 8.5%;
+      transform: translateX(-50%);
+      overflow: hidden;
+      animation: bounce 2s infinite;
+    }
+
+    .small-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 25px;
+    }
+
+    .paw-print {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 70px;
+      height: 70px;
+      animation: bounceLight 2s infinite;
+    }
+
+    .paw-print img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 20px;
+      position: absolute;
+      bottom: 80px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: black;
+    }
+
+    h2, p {
+      margin: 0;
+      color: black;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes bounceLight {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        transform: translateY(-5px) scale(1.2);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card-container">
+  <div class="card">
+    <div class="content">
+      <h2>หวัดดีนุด !</h2>
+      <p>ทดสอบการสแกน</p>
+      <p></p>
+    </div>
+    <div class="paw-print">
+      <img src="https://lh5.googleusercontent.com/d/1v1ToTLrNdmOTjGmUqg18WDsGzP25CA7E" alt="Paw Print">
+    </div>
+  </div>
+  <div class="small-card">
+    <img src="https://lh5.googleusercontent.com/d/13kfcnoDIEeqo4lS6vRXblikPWohlHyyz" alt="Cat">
+  </div>
+</div>
+
+</body>
+</html>
