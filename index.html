@@ -1,162 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Clicky Analytics -->
-    <script async data-id="101460981" src="//static.getclicky.com/js"></script>
-    <!-- End Clicky Analytics -->
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat</title>
-    <link rel="icon" type="image/png" href="https://lh5.googleusercontent.com/d/1m3kQQPUECjf1xj4M09Lrhhy0ecbrgGNk">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ69QE5XM5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
   
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-            font-family: Kanit, sans-serif;
-            background: linear-gradient(15deg, #131519 50%, #292a2f 50.1%);
-        }
+    gtag('config', 'G-VQ69QE5XM5');
+  </script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat</title>
+  <link rel="icon" type="image/png" href="https://lh5.googleusercontent.com/d/1m3kQQPUECjf1xj4M09Lrhhy0ecbrgGNk">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+  
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: Kanit, sans-serif;
+      background: linear-gradient(15deg, #131519 50%, #292a2f 50.1%);
+    }
 
-        .card-container {
-            position: relative;
-        }
+    .card-container {
+      position: relative;
+    }
 
-        .card,
-        .small-card {
-            width: 300px;
-            height: 400px;
-            background-color: #f5f5f5;
-            border-radius: 25px;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); /* ตั้งค่า box-shadow เริ่มต้น */
-            overflow: hidden;
-            margin-bottom: 20px;
-            position: relative;
-            animation: bounce 2s infinite, shine 2s infinite alternate; /* ใช้ค่า animation ได้หลายครั้ง */
-        }
+    .card,
+    .small-card {
+    width: 300px;
+    height: 400px;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); /* ตั้งค่า box-shadow เริ่มต้น */
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    animation: bounce 2s infinite, shine 2s infinite alternate; /* ใช้ค่า animation ได้หลายครั้ง */
+    }
 
-        @keyframes shine {
-            0%, 100% {
-                box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); /* เริ่มต้นและสิ้นสุดเป็นสีขาว */
-            }
-            50% {
-                box-shadow: 0 0 30px rgba(255, 255, 255, 0); /* กลายเป็นความโปร่งแสง (box-shadow ใส่สี alpha 0) ที่ครึ่งทางของ animation */
-            }
-        }
+    @keyframes shine {
+      0%, 100% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); /* เริ่มต้นและสิ้นสุดเป็นสีขาว */
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0); /* กลายเป็นความโปร่งแสง (box-shadow ใส่สี alpha 0) ที่ครึ่งทางของ animation */
+      }
+    }
 
-        .cat-card {
-            width: 250px;
-            height: 250px;
-            background-color: transparent; 
-            position: absolute;
-            top: -50px;
-            left: 8.5%;
-            transform: translateX(-50%);
-            overflow: hidden;
-            animation: bounce 2s infinite;
-            border-radius: 25px; 
-        }
+    .cat-card {
+    width: 350px;
+    height: 350px;
+    background-color: transparent; 
+    position: absolute;
+    top: -192px; /* ปรับขึ้นลง */
+    left: -8%; /* ปรับซ้ายขวา */
+    transform: translateX(-50%);
+    overflow: hidden;
+    animation: bounce 2s infinite;
+    border-radius: 25px; 
+  }
 
-        .cat-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 25px; 
-        }
+    .cat-card img {
+    width: 100%;
+    height: 135%;
+    object-fit: contain;
+    border-radius: 25px; 
+  }
 
-        .paw-print {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            width: 70px;
-            height: 70px;
-            animation: bounceLight 2s infinite;
-        }
 
-        .paw-print img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
 
-        .content {
-            padding: 20px;
-            position: absolute;
-            bottom: 80px; /* ปรับตำแหน่งตามต้องการ */
-            left: 0;
-            right: 0;
-            text-align: center;
-            color: black;
-        }
+    .paw-print {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 70px;
+      height: 70px;
+      animation: bounceLight 2s infinite;
+    }
 
-        h2 {
-            margin-bottom: 10px; /* ปรับระยะห่างด้านล่างของ <h2> ตามต้องการ */
-        }
+    .paw-print img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        p {
-            margin-top: 10px; /* ปรับระยะห่างข้างบนของ <p> ตามต้องการ */
-        }
+     .content {
+      padding: 20px;
+      position: absolute;
+      bottom: 80px; /* ปรับตำแหน่งตามต้องการ */
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: black;
+    }
 
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
+    h2 {
+      margin-bottom: 10px; /* ปรับระยะห่างด้านล่างของ <h2> ตามต้องการ */
+    }
 
-        @keyframes bounceLight {
-            0%, 100% {
-                transform: translateY(0) scale(1);
-            }
-            50% {
-                transform: translateY(-5px) scale(1.2);
-            }
-        }
+    p {
+      margin-top: 10px; /* ปรับระยะห่างข้างบนของ <p> ตามต้องการ */
+      font-size: 20px;
+    }
+
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes bounceLight {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        transform: translateY(-5px) scale(1.2);
+      }
+    }
     
-        .button {
-            background-color: #000; /* สีดำ */
-            color: #fff; /* สีขาว */
-            padding: 12px 30px; /* ปรับขนาดของปุ่มตามต้องการ */
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 20px;
-            font-family: Kanit, sans-serif;
-        }
+      .button {
+      background-color: #000; /* สีดำ */
+      color: #fff; /* สีขาว */
+      padding: 12px 30px; /* ปรับขนาดของปุ่มตามต้องการ */
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 20px;
+      font-family: Kanit, sans-serif;
+    }
     
-        .note {
-            color: white;
-            position: absolute;
-            bottom: 30px; /* ปรับตำแหน่งตามต้องการ */
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center; /* จัดตำแหน่งตรงกลางแนวนอน */
-            white-space: nowrap; /* ไม่ให้ข้อความขึ้นบรรทัดใหม่ */
-        }
-    </style>
+      h8 {
+      color: white;
+      position: absolute;
+      bottom: 30px; /* ปรับตำแหน่งตามต้องการ */
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center; /* จัดตำแหน่งตรงกลางแนวนอน */
+      white-space: nowrap; /* ไม่ให้ข้อความขึ้นบรรทัดใหม่ */
+    }
+
+
+  </style>
 </head>
 <body>
-    <div class="card-container">
-        <div class="card">
-            <div class="content">
-                <h2><button class="button">หวัดดีนุด !</button></h2>
-                <p>ชวนเลาขึ้นมาเล่นข้างบนแล้ว <br> พาเราไปส่งที่ประตูด้วยน้า 😹</p>
-            </div>
-            <div class="paw-print">
-                <img src="https://lh5.googleusercontent.com/d/1v1ToTLrNdmOTjGmUqg18WDsGzP25CA7E" alt="Paw Print">
-            </div>
-        </div>
-        <div class="cat-card">
-            <img src="https://lh5.googleusercontent.com/d/1m3kQQPUECjf1xj4M09Lrhhy0ecbrgGNk" alt="Cat">
-        </div>
+
+<div class="card-container">
+  <div class="card">
+    <div class="content">
+  <h2><button class="button">อย่ากักขังกันเลย !</button></h2>
+  <p>กูต้องขี้ ต้องเยี่ยว <br> ปล่อยแล้วก็เปิดประตูให้ด้วย</p>
+</div>
+    <div class="paw-print">
+      <img src="https://lh5.googleusercontent.com/d/1v1ToTLrNdmOTjGmUqg18WDsGzP25CA7E" alt="Paw Print">
     </div>
-    <div class="note">ปล.ถ้ากลางคืนได้ยินเลาร้องอยู่ที่ทางเดิน <br> ช่วยใจดีเปิดประตูให้เลาหน่อย</div>
+  </div>
+  <div class="cat-card">
+      <img src="https://lh5.googleusercontent.com/d/1ECZipU9RX3qEbHW7KIyl7ufHXMI5VFvh" alt="Cat">
+  </div>
+</div>
 </body>
 </html>
